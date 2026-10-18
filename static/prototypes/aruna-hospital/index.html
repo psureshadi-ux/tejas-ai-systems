@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aruna Hospital - 24/7 AI Patient Care & Appointment Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .chat-bubble-patient { background-color: #f1f5f9; color: #1e293b; border-radius: 18px 18px 18px 4px; }
+        .chat-bubble-ai { background-color: #0284c7; color: #ffffff; border-radius: 18px 18px 4px 18px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col">
+
+    <!-- TEJAS AI DEMO CONTROL BANNER FOR THE DOCTOR -->
+    <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white px-4 py-3 shadow-md sticky top-0 z-50 border-b border-blue-500/30">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center justify-center bg-blue-500 text-white text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wider animate-pulse">Live Prototype</span>
+                <p class="text-xs md:text-sm font-medium">Built for <strong>Aruna Hospital</strong> by <span class="text-blue-300 font-bold">Tejas AI Systems</span></p>
+            </div>
+            <!-- Interactive Simulator Buttons -->
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs text-blue-200 hidden lg:inline">Doctor Simulation:</span>
+                <button onclick="simulateQuestion('What are Dr. Chief Medical Officer\'s consultation fees and OPD timings?')" class="bg-blue-800/80 hover:bg-blue-700 text-white text-xs px-2.5 py-1.5 rounded-lg border border-blue-600/50 transition">
+                    ⚡ Test FAQ
+                </button>
+                <button onclick="simulateQuestion('I want to book an appointment for tomorrow evening.')" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-2.5 py-1.5 rounded-lg font-semibold shadow-sm transition">
+                    📅 Test Booking
+                </button>
+                <button onclick="showDoctorWhatsAppAlert()" class="bg-slate-800 hover:bg-slate-700 text-blue-200 text-xs px-2.5 py-1.5 rounded-lg border border-slate-600 transition">
+                    📱 View Doctor Notification
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CLINIC HERO HEADER -->
+    <header class="bg-white border-b border-slate-200 py-4 px-4 shadow-sm">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-2xl shadow-inner">
+                    🏥
+                </div>
+                <div>
+                    <h1 class="text-lg md:text-xl font-extrabold text-slate-900 leading-tight">Aruna Hospital</h1>
+                    <p class="text-xs text-slate-500 flex items-center gap-1">
+                        <span>📍 Tataiah Gunta, Tirupati</span> • <span class="text-emerald-600 font-medium font-semibold">● 24/7 AI Reception Active</span>
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="tel:+91 877 221518" class="text-xs md:text-sm font-medium text-slate-600 hover:text-blue-600 px-3 py-2 border border-slate-200 rounded-lg">
+                    📞 +91 877 221518
+                </a>
+                <button onclick="focusChat()" class="bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-lg shadow-sm transition flex items-center gap-1.5">
+                    <span>Book Appointment</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT & INTERACTIVE CHAT ENGINE -->
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start w-full">
+        
+        <!-- Left: Clinic Overview & Credentials -->
+        <div class="lg:col-span-5 space-y-6">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-xl">
+                        👨‍⚕️
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-slate-900 text-base">Chief Medical Officer</h2>
+                        <p class="text-xs text-slate-500">Senior Consultant & Specialist</p>
+                    </div>
+                </div>
+                <div class="border-t border-slate-100 pt-3 space-y-2 text-xs text-slate-600">
+                    <div class="flex justify-between py-1">
+                        <span class="text-slate-400">Location:</span>
+                        <span class="font-medium text-slate-800">Tataiah Gunta, Tirupati</span>
+                    </div>
+                    <div class="flex justify-between py-1">
+                        <span class="text-slate-400">Morning OPD:</span>
+                        <span class="font-medium text-slate-800">10:00 AM – 01:30 PM</span>
+                    </div>
+                    <div class="flex justify-between py-1">
+                        <span class="text-slate-400">Evening OPD:</span>
+                        <span class="font-medium text-slate-800">05:30 PM – 09:00 PM</span>
+                    </div>
+                    <div class="flex justify-between py-1">
+                        <span class="text-slate-400">Sundays:</span>
+                        <span class="font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">10:00 AM – 01:00 PM (Emergency on call)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Proposition for the Doctor -->
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 text-slate-800">
+                <div class="flex items-center gap-2 mb-2 text-blue-800 font-bold text-sm">
+                    <span>💡</span> Why Patients Love This AI
+                </div>
+                <ul class="text-xs space-y-2 text-slate-600">
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">✓</span>
+                        <span><strong>Zero Missed Appointments:</strong> Patients booking at 10 PM get an instant slot confirmation.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">✓</span>
+                        <span><strong>Frees Front Desk:</strong> Automatically answers common questions about fees, timings, and prep.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">✓</span>
+                        <span><strong>Instant WhatsApp Sync:</strong> Doctor and patient both receive immediate WhatsApp confirmation.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right: The 24/7 AI Assistant & Booking Interface -->
+        <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden flex flex-col h-[580px]">
+            <!-- Chat Header -->
+            <div class="bg-slate-900 text-white p-4 flex items-center justify-between border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold text-lg text-white">
+                            🩺
+                        </div>
+                        <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-slate-900 rounded-full"></span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm leading-tight">Aruna Hospital AI Receptionist</h3>
+                        <p class="text-[11px] text-emerald-400 font-medium">Online | Instant Appointments & FAQs</p>
+                    </div>
+                </div>
+                <span class="text-[11px] bg-slate-800 text-slate-300 px-2 py-1 rounded border border-slate-700">Telugu & English</span>
+            </div>
+
+            <!-- Message Area -->
+            <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3 bg-slate-50 text-xs md:text-sm">
+                <!-- Greeting -->
+                <div class="flex items-start gap-2.5">
+                    <div class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold shrink-0">AI</div>
+                    <div class="chat-bubble-ai p-3.5 max-w-[85%] shadow-sm leading-relaxed">
+                        Namaste! 🙏 Welcome to <strong>Aruna Hospital</strong>, Tataiah Gunta, Tirupati.
+                        <br><br>
+                        I am your 24/7 AI Assistant. I can help you:
+                        <ul class="list-disc ml-4 mt-1.5 space-y-1 text-blue-100">
+                            <li>Book a consultation slot with Chief Medical Officer</li>
+                            <li>Check OPD timings and fees</li>
+                            <li>Get emergency contact details & directions</li>
+                        </ul>
+                        <br>
+                        How can I assist you today?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Action Pills -->
+            <div class="p-2 bg-white border-t border-slate-100 flex items-center gap-1.5 overflow-x-auto text-xs">
+                <button onclick="simulateQuestion('Book an appointment for today')" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full transition">
+                    📅 Book Appointment
+                </button>
+                <button onclick="simulateQuestion('What are your OPD timings?')" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full transition">
+                    ⏰ Timings & Fees
+                </button>
+                <button onclick="simulateQuestion('Where are you located in Tirupati?')" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full transition">
+                    📍 Clinic Location
+                </button>
+            </div>
+
+            <!-- Input Box -->
+            <form onsubmit="handleChatSubmit(event)" class="p-3 bg-white border-t border-slate-200 flex items-center gap-2">
+                <input id="chatInput" type="text" placeholder="Type your inquiry or request an appointment..." class="flex-1 text-xs md:text-sm bg-slate-100 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-bold text-xs md:text-sm shadow-sm transition flex items-center gap-1">
+                    <span>Send</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- DOCTOR NOTIFICATION MODAL -->
+    <div id="doctorAlertModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-100">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+                <div class="flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">📲</span>
+                    <h4 class="font-bold text-slate-900 text-sm">Instant WhatsApp Alert Sent to Doctor</h4>
+                </div>
+                <button onclick="closeDoctorAlertModal()" class="text-slate-400 hover:text-slate-600 text-lg font-bold">&times;</button>
+            </div>
+            <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-xs font-mono text-emerald-900 space-y-2 mb-4">
+                <div class="text-[11px] text-emerald-700 font-bold uppercase tracking-wider mb-1">WhatsApp Message Preview:</div>
+                <p>🔔 <strong>NEW PATIENT APPOINTMENT BOOKED</strong></p>
+                <p>• <strong>Patient:</strong> S. Venkat Reddy</p>
+                <p>• <strong>Phone:</strong> +91 94401 XXXXX</p>
+                <p>• <strong>Slot:</strong> Tomorrow, 06:30 PM (Evening OPD)</p>
+                <p>• <strong>Reason:</strong> General Consultation / Checkup</p>
+                <p>• <strong>Clinic:</strong> Aruna Hospital</p>
+                <p class="text-[10px] text-slate-500 pt-1 border-t border-emerald-200">Delivered via Tejas AI Engine ⚡</p>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Whenever a patient books using the AI Assistant, this alert lands immediately on your front-desk or personal WhatsApp. Zero manual data entry.
+            </p>
+            <button onclick="closeDoctorAlertModal()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 rounded-xl text-xs transition">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- SCRIPT FOR SIMULATION & LOGIC -->
+    <script>
+        const clinicName = "Aruna Hospital";
+        const doctorName = "Chief Medical Officer";
+        const areaName = "Tataiah Gunta";
+
+        function focusChat() {
+            document.getElementById('chatInput').focus();
+        }
+
+        function showDoctorWhatsAppAlert() {
+            document.getElementById('doctorAlertModal').classList.remove('hidden');
+        }
+
+        function closeDoctorAlertModal() {
+            document.getElementById('doctorAlertModal').classList.add('hidden');
+        }
+
+        function appendMessage(sender, text, isAi) {
+            const container = document.getElementById('chatMessages');
+            const row = document.createElement('div');
+            row.className = isAi ? 'flex items-start gap-2.5' : 'flex items-end justify-end gap-2.5';
+            
+            if (isAi) {
+                row.innerHTML = `
+                    <div class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold shrink-0">AI</div>
+                    <div class="chat-bubble-ai p-3.5 max-w-[85%] shadow-sm leading-relaxed">${text}</div>
+                `;
+            } else {
+                row.innerHTML = `
+                    <div class="chat-bubble-patient p-3.5 max-w-[85%] shadow-sm leading-relaxed">${text}</div>
+                    <div class="w-7 h-7 rounded-full bg-slate-400 text-white flex items-center justify-center text-xs font-bold shrink-0">You</div>
+                `;
+            }
+            container.appendChild(row);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function simulateQuestion(q) {
+            appendMessage('patient', q, false);
+            setTimeout(() => {
+                if (q.toLowerCase().includes('timings') || q.toLowerCase().includes('fees')) {
+                    appendMessage('ai', `Dr. ${doctorName} is available at ${clinicName}:<br>• <strong>Morning:</strong> 10:00 AM – 01:30 PM<br>• <strong>Evening:</strong> 05:30 PM – 09:00 PM<br><br>The standard consultation fee is <strong>₹300 - ₹500</strong>. Would you like me to reserve a token/slot for you?`, true);
+                } else if (q.toLowerCase().includes('appointment') || q.toLowerCase().includes('book')) {
+                    appendMessage('ai', `Certainly! We have open slots tomorrow evening at <strong>06:00 PM</strong>, <strong>06:30 PM</strong>, and <strong>07:15 PM</strong>.<br><br>Please provide your <strong>Name and Contact Number</strong> to confirm your slot with Dr. ${doctorName}.`, true);
+                } else if (q.toLowerCase().includes('located') || q.toLowerCase().includes('location')) {
+                    appendMessage('ai', `${clinicName} is conveniently located at <strong>${areaName}, Tirupati</strong> (landmark: beside main road).<br><br>You can click here for instant Google Maps navigation: <a href="https://maps.google.com/?q=${encodeURIComponent(clinicName + ' ' + areaName + ' Tirupati')}" target="_blank" class="underline font-bold text-white">Open in Google Maps</a>.`, true);
+                } else {
+                    appendMessage('ai', `Thank you for asking! Dr. ${doctorName} specializes in this. Please let me know your preferred day and time for a consultation so our team can attend to you promptly.`, true);
+                }
+            }, 600);
+        }
+
+        function handleChatSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('chatInput');
+            const val = input.value.trim();
+            if (!val) return;
+            appendMessage('patient', val, false);
+            input.value = '';
+            setTimeout(() => {
+                if (/\d{10}/.test(val) || val.toLowerCase().includes('reddy') || val.toLowerCase().includes('kumar')) {
+                    appendMessage('ai', `✅ <strong>Appointment Slot Reserved!</strong><br><br>Thank you! We have logged your request. A confirmation SMS/WhatsApp with your token has been dispatched. See you at ${clinicName}!<br><br><button onclick="showDoctorWhatsAppAlert()" class="mt-2 bg-white text-blue-900 font-bold px-3 py-1.5 rounded-lg text-xs shadow-sm">View Doctor WhatsApp Notification 📱</button>`, true);
+                } else {
+                    simulateQuestion(val);
+                }
+            }, 700);
+        }
+    </script>
+</body>
+</html>

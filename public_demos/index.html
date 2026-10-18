@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejas AI Systems - Tirupati AI Client Prototypes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-40 py-4 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center font-black text-xl text-white shadow-lg">
+                    T
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg text-white">Tejas AI Systems</h1>
+                    <p class="text-xs text-slate-400">Tirupati 24/7 AI Lead & Appointment Engine</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/919876543210" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-4 py-2 rounded-xl transition flex items-center gap-2">
+                    <span>💬 WhatsApp Us</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto px-6 py-12 text-center">
+        <span class="bg-blue-500/10 text-blue-400 border border-blue-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+            Verified Client Demonstrations
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black mt-4 text-white tracking-tight">
+            24/7 AI Receptionists & Property Advisors
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto mt-3 text-sm">
+            Interactive prototypes built specifically for premier healthcare practices and real estate developers across Tirupati.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="max-w-md mx-auto mt-8">
+            <input type="text" id="searchInput" onkeyup="filterDemos()" placeholder="Search by clinic, builder, or area (e.g. Prakasam Road)..." class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+    </section>
+
+    <!-- Grid of Demos -->
+    <main class="max-w-6xl mx-auto px-6 pb-16 flex-1 w-full">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="demoGrid">
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="maruthi dental international" data-area="air bypass road" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 AIR Bypass Road</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Maruthi Dental International</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./maruthi-dental-international/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="rnr's dental clinic" data-area="air bypass road" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 AIR Bypass Road</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">RNR's Dental Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./rnr-s-dental-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="pranu dental hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Pranu Dental Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./pranu-dental-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="naveen's dental hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Naveen's Dental Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./naveen-s-dental-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="star dental hospital and root canal centre" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Star Dental Hospital And Root Canal Centre</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./star-dental-hospital-and-root-canal-centre/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="kamakshi sai dental hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Kamakshi Sai Dental Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./kamakshi-sai-dental-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="chandana dental clinic" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Chandana Dental Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./chandana-dental-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sri dental hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sri Dental Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sri-dental-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sree chandra dental hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sree Chandra Dental Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sree-chandra-dental-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="avasa dental hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Avasa Dental Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./avasa-dental-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="smile dental care" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Smile Dental Care</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./smile-dental-care/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sudarshan super speciality dental hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sudarshan Super Speciality Dental Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sudarshan-super-speciality-dental-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="firoz dental hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Firoz Dental Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./firoz-dental-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="manya dental clinic" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Manya Dental Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./manya-dental-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="hari manasa dental care" data-area="tataiah gunta" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tataiah Gunta</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Hari Manasa Dental Care</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Care • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./hari-manasa-dental-care/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sri sai sudha hospitals" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sri Sai Sudha Hospitals</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sri-sai-sudha-hospitals/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="harshitha hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">HARSHITHA HOSPITAL</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./harshitha-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="shri gangotri hospitals" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Shri Gangotri Hospitals</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./shri-gangotri-hospitals/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sankalp super speciality hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sankalp Super Speciality Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sankalp-super-speciality-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="manohari hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Manohari Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./manohari-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="tirumala hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Tirumala Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./tirumala-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sankalpa heart institute" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sankalpa Heart Institute</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sankalpa-heart-institute/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="clinic nisha" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Clinic Nisha</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./clinic-nisha/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="vaishnavi children hospital" data-area="tataiah gunta" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tataiah Gunta</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Vaishnavi Children Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./vaishnavi-children-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="prashanth hospital" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Prashanth Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./prashanth-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sri vignesh hospital" data-area="tataiah gunta" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tataiah Gunta</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sri Vignesh Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sri-vignesh-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="asalatha test tube baby & multispecialty hospital" data-area="tataiah gunta" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tataiah Gunta</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Asalatha Test Tube Baby & Multispecialty Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./asalatha-test-tube-baby-multispecialty-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sumana ano - rectal hospital" data-area="tataiah gunta" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tataiah Gunta</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sumana Ano - Rectal Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sumana-ano-rectal-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="homeo hospital" data-area="tataiah gunta" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tataiah Gunta</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Homeo Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./homeo-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="aruna hospital" data-area="tataiah gunta" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tataiah Gunta</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Aruna Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Hospital • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./aruna-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="madhu gastro and liver clinic" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Madhu Gastro And Liver Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./madhu-gastro-and-liver-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="vasu cardiac care" data-area="korlagunta" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Korlagunta</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Vasu Cardiac Care</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./vasu-cardiac-care/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="seven hills physiotherapy clinic" data-area="air bypass road" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 AIR Bypass Road</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Seven Hills Physiotherapy Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./seven-hills-physiotherapy-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sseed medical centre" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sseed Medical Centre</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sseed-medical-centre/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="snesi diabetes and thyroid clinic" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Snesi Diabetes And Thyroid Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./snesi-diabetes-and-thyroid-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="rupa clinic" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Rupa Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./rupa-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sri sai ent care" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sri Sai ENT Care</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sri-sai-ent-care/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="east land health centre" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">East Land Health Centre</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./east-land-health-centre/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="chinnari hitech children and new born clinic" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Chinnari Hitech Children And New Born Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./chinnari-hitech-children-and-new-born-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="venkatakrishna homeo home" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Venkatakrishna Homeo Home</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./venkatakrishna-homeo-home/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="srindhi allergy and chest clinic" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Srindhi Allergy And Chest Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./srindhi-allergy-and-chest-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="nkumba university clinic" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Nkumba University Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./nkumba-university-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sathish gastro" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sathish Gastro</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sathish-gastro/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="dr. sridevi clinic" data-area="tirupati central" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tirupati Central</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Dr. Sridevi Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./dr-sridevi-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="anuradha nursing home" data-area="tataiah gunta" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tataiah Gunta</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Anuradha Nursing Home</h3>
+                    <p class="text-xs text-slate-400 mt-1">Clinic • Chief Medical Officer</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./anuradha-nursing-home/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="tirumala heights residential towers" data-area="chandragiri bypass" data-cat="realestate">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-900/40 text-emerald-300 border border-emerald-700/50">
+                            🏢 Real Estate
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Chandragiri Bypass</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Tirumala Heights Residential Towers</h3>
+                    <p class="text-xs text-slate-400 mt-1">High-Rise Construction • Mr. P. Vijay Kumar</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./tirumala-heights-towers/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="vaikunta prime 2 & 3 bhk living" data-area="tiruchanur road" data-cat="realestate">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-900/40 text-emerald-300 border border-emerald-700/50">
+                            🏢 Real Estate
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tiruchanur Road</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Vaikunta Prime 2 & 3 BHK Living</h3>
+                    <p class="text-xs text-slate-400 mt-1">Apartment Complexes • Mr. V. Chandrasekhar Naidu</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./vaikunta-prime-apartments/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sree city green meadows residential plots" data-area="renigunta road" data-cat="realestate">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-900/40 text-emerald-300 border border-emerald-700/50">
+                            🏢 Real Estate
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Renigunta Road</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sree City Green Meadows Residential Plots</h3>
+                    <p class="text-xs text-slate-400 mt-1">TUDA Approved Plots • Mr. K. Bhaskar (Sales Director)</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sree-city-green-meadows/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="bliss county luxury villas & apartments" data-area="karakambadi road" data-cat="realestate">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-900/40 text-emerald-300 border border-emerald-700/50">
+                            🏢 Real Estate
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Karakambadi Road</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Bliss County Luxury Villas & Apartments</h3>
+                    <p class="text-xs text-slate-400 mt-1">Luxury Gated Community • Mr. N. Ramanadha Reddy (Managing Partner)</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./bliss-county-tirupati/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="dr. vengala rao eye hospital" data-area="tataiah gunta" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Tataiah Gunta</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Dr. Vengala Rao Eye Hospital</h3>
+                    <p class="text-xs text-slate-400 mt-1">Ophthalmology & Lasik • Dr. Vengala Rao, MS (Ophth)</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./vengala-rao-eye/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sri sai orthopedic & joint replacement centre" data-area="korlagunta" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Korlagunta</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sri Sai Orthopedic & Joint Replacement Centre</h3>
+                    <p class="text-xs text-slate-400 mt-1">Orthopedics • Dr. M. Suresh Kumar, MS (Ortho)</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sri-sai-ortho/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="tirumala skin & cosmetology clinic" data-area="air bypass road" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 AIR Bypass Road</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Tirumala Skin & Cosmetology Clinic</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dermatology & Hair Care • Dr. R. Tejaswi, MD (DVL)</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./tirumala-skin-clinic/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="amma children hospital & newborn center" data-area="bhavani nagar" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Bhavani Nagar</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Amma Children Hospital & Newborn Center</h3>
+                    <p class="text-xs text-slate-400 mt-1">Pediatric Hospital • Dr. P. Madhavi, MD (Peds)</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./amma-children-hospital/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="demo-card bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 hover:border-blue-500/60 transition hover:shadow-xl flex flex-col justify-between" data-name="sri venkateswara dental hospital & implant centre" data-area="prakasam road" data-cat="healthcare">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-900/40 text-blue-300 border border-blue-700/50">
+                            🏥 Healthcare
+                        </span>
+                        <span class="text-[11px] text-slate-400">📍 Prakasam Road</span>
+                    </div>
+                    <h3 class="font-bold text-base text-white leading-snug">Sri Venkateswara Dental Hospital & Implant Centre</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dental Clinic • Dr. K. Srinivasulu, MDS</p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-[11px] text-emerald-400 font-semibold">● 24/7 AI Active</span>
+                    <a href="./sri-venkateswara-dental/index.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>Launch Demo</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Tejas AI Systems • Tirupati, Andhra Pradesh</p>
+    </footer>
+
+    <script>
+        function filterDemos() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.demo-card');
+            cards.forEach(card => {
+                const name = card.getAttribute('data-name');
+                const area = card.getAttribute('data-area');
+                if (name.includes(query) || area.includes(query)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

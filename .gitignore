@@ -1,0 +1,39 @@
+# Next.js build
+.next/
+out/
+build/
+dist/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment variables
+.env
+.env*.local
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Local databases
+*.sqlite3
+*.db
+tejas_crm.db
+
+# OS files
+.DS_Store
+Thumbs.db
