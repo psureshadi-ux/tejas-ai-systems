@@ -62,6 +62,21 @@ export default function FreeAuditPage() {
       </div>
 
       <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 shadow-2xl">
+        <div className="mb-6 p-4 rounded-2xl bg-cyan-950/40 border border-cyan-800/60 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <div>
+            <p className="text-xs font-bold text-white">Prefer to pick a confirmed calendar slot?</p>
+            <p className="text-[11px] text-cyan-300">Choose an evening or weekend 15-minute slot directly on Cal.com.</p>
+          </div>
+          <a
+            href="https://cal.com/tejasai/demo"
+            target="_blank"
+            rel="noreferrer"
+            className="shrink-0 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs py-2 px-4 rounded-xl transition shadow-md shadow-cyan-500/20 inline-flex items-center gap-1.5"
+          >
+            <span>Open Cal.com</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </a>
+        </div>
         {success ? (
           <div className="text-center space-y-4 py-8">
             <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
@@ -69,6 +84,18 @@ export default function FreeAuditPage() {
             <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
               Thank you, {formData.name}. Our Operations Director will review your business and dispatch your custom interactive prototype to <strong>{formData.phone}</strong> on WhatsApp within 30 minutes.
             </p>
+            <div className="pt-4 border-t border-slate-800">
+              <p className="text-xs text-slate-400 mb-2">Want to lock in an exact 15-minute slot on calendar right now?</p>
+              <a
+                href="https://cal.com/tejasai/demo"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-xs py-2.5 px-6 rounded-xl transition shadow-lg shadow-cyan-500/20"
+              >
+                <span>Pick 15-Min Slot on Cal.com</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">

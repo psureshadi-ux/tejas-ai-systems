@@ -61,7 +61,7 @@ export default function CookiePolicyPage() {
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-white">4. Contact Our Data Protection Officer</h2>
           <p>
-            For inquiries regarding our cookie policies or data protection practices in Tirupati, contact our Data Grievance Officer at <strong className="text-cyan-400">privacy@tejasai.com</strong>.
+            For inquiries regarding our cookie policies or data protection practices in Tirupati, contact our Data Grievance Officer at <strong className="text-cyan-400">info@tejasaisystems.com</strong>.
           </p>
         </section>
       </div>

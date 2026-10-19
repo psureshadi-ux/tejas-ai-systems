@@ -51,7 +51,9 @@ export default function PrivacyPolicyPage() {
         <p>
           For questions, data access requests, or deletion requests, contact our Operations Director at:
           <br />
-          <strong>Email:</strong> privacy@tejasai.in
+          <strong>Email:</strong> info@tejasaisystems.com
+          <br />
+          <strong>Phone:</strong> +91 70131 29799
           <br />
           <strong>Address:</strong> Tirupati Urban, Andhra Pradesh 517501, India.
         </p>

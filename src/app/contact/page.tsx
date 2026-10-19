@@ -78,7 +78,7 @@ export default function ContactPage() {
               <Phone className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-white">Operations Director (Direct)</p>
-                <p className="text-slate-400">+91 98765 43210</p>
+                <p className="text-slate-400">+91 70131 29799</p>
               </div>
             </div>
 
@@ -86,14 +86,14 @@ export default function ContactPage() {
               <Mail className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-white">Email Address</p>
-                <p className="text-slate-400">contact@tejasai.in</p>
+                <p className="text-slate-400">info@tejasaisystems.com</p>
               </div>
             </div>
           </div>
 
           <div className="pt-4 border-t border-slate-800">
             <a
-              href="https://wa.me/919876543210?text=Hello%20Tejas%20AI%20Systems%2C%20I%20am%20interested%20in%20a%2024%2F7%20AI%20assistant%20for%20my%20business."
+              href="https://wa.me/917013129799?text=Hello%20Tejas%20AI%20Systems%2C%20I%20am%20interested%20in%20a%2024%2F7%20AI%20assistant%20for%20my%20business."
               target="_blank"
               rel="noreferrer"
               className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs py-3 rounded-xl transition shadow-md shadow-emerald-600/20"

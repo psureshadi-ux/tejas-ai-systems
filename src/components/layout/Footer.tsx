@@ -24,11 +24,11 @@ export function Footer() {
             </p>
             <p className="flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-              <span>+91 98765 43210</span>
+              <span>+91 70131 29799</span>
             </p>
             <p className="flex items-center gap-1.5">
               <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-              <span>contact@tejasai.in</span>
+              <span>info@tejasaisystems.com</span>
             </p>
           </div>
         </div>
