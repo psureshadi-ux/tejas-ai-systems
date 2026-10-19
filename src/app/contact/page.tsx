@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, MessageCircle, Calendar } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -91,7 +91,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-slate-800">
+          <div className="pt-4 border-t border-slate-800 space-y-2.5">
             <a
               href="https://wa.me/917013129799?text=Hello%20Tejas%20AI%20Systems%2C%20I%20am%20interested%20in%20a%2024%2F7%20AI%20assistant%20for%20my%20business."
               target="_blank"
@@ -100,6 +100,15 @@ export default function ContactPage() {
             >
               <MessageCircle className="w-4 h-4" />
               <span>Direct WhatsApp Chat</span>
+            </a>
+            <a
+              href="https://cal.com/tejasai/15-min-ai-lead-appointment-demo"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold text-xs py-3 rounded-xl transition border border-slate-700 hover:border-cyan-500/40"
+            >
+              <Calendar className="w-4 h-4 text-cyan-400" />
+              <span>Book 15-Min Demo on Cal.com</span>
             </a>
           </div>
         </div>

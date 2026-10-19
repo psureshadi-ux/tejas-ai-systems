@@ -68,7 +68,7 @@ export default function FreeAuditPage() {
             <p className="text-[11px] text-cyan-300">Choose an evening or weekend 15-minute slot directly on Cal.com.</p>
           </div>
           <a
-            href="https://cal.com/tejasai/demo"
+            href="https://cal.com/tejasai/15-min-ai-lead-appointment-demo"
             target="_blank"
             rel="noreferrer"
             className="shrink-0 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs py-2 px-4 rounded-xl transition shadow-md shadow-cyan-500/20 inline-flex items-center gap-1.5"
@@ -87,7 +87,7 @@ export default function FreeAuditPage() {
             <div className="pt-4 border-t border-slate-800">
               <p className="text-xs text-slate-400 mb-2">Want to lock in an exact 15-minute slot on calendar right now?</p>
               <a
-                href="https://cal.com/tejasai/demo"
+                href="https://cal.com/tejasai/15-min-ai-lead-appointment-demo"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-xs py-2.5 px-6 rounded-xl transition shadow-lg shadow-cyan-500/20"
