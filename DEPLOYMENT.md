@@ -7,14 +7,16 @@
 
 ---
 
-## 1. Verified Live Deployment Endpoints
+## 1. Verified Dual-Website Live Endpoints
 
-| Environment | Endpoint URL | Status | Notes |
-| :--- | :--- | :---: | :--- |
-| **Custom Domain** | `https://tejasaisystems.com` | `LIVE` | Primary customer & client acquisition portal |
-| **Vercel Direct** | `https://tejas-ai-systems-qjzkm2gxj-psureshadi-3927s-projects.vercel.app` | `LIVE` | Immutable Vercel edge deployment link |
-| **Health Probe** | `https://tejasaisystems.com/api/health` | `HEALTHY` | Automated service readiness endpoint |
-| **Dynamic Demos** | `https://tejasaisystems.com/demos` | `LIVE` | 54 Tirupati interactive client prototypes |
+Both platforms are now running simultaneously without conflict:
+
+| Platform | Production URL | Description | Status |
+| :--- | :--- | :--- | :---: |
+| **Website 1 (Main Business)** | [**`https://tejasaisystems.com`**](https://tejasaisystems.com) | Core AI Operations Infrastructure for Manufacturing MSMEs with Tara AI Voice Assistant & Cost-Leak Audit | `LIVE & RESTORED` |
+| **Website 2 (Lead Engine)** | [**`https://leads.tejasaisystems.com`**](https://leads.tejasaisystems.com) | 24/7 AI Lead & Appointment Specialist for Healthcare & Real Estate with 54 Tirupati Live Demos, CRM, & Razorpay | `LIVE & OPERATIONAL` |
+| **Lead Engine Direct Edge** | [**`https://tejas-lead-engine.vercel.app`**](https://tejas-lead-engine.vercel.app) | Dedicated Vercel Edge direct URL for the lead engine | `LIVE` |
+| **Lead Engine Health API** | [**`https://leads.tejasaisystems.com/api/health`**](https://leads.tejasaisystems.com/api/health) | Automated service health probe (200 OK) | `HEALTHY` |
 
 ---
 
